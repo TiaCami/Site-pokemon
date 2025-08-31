@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Pokémon</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        body {
+            background-color: #ffffff; /* fundo branco */
+            color: #333;
+        }
+
+        header {
+            background-color: #3b4cca;
+            color: #fff;
+            padding: 25px;
+            text-align: center;
+            font-size: 1.5rem;
+            border-bottom: 5px solid #ff0000;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .intro p {
+            font-size: 1rem;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .about {
+            background-color: #fff3c4;
+            border: 3px solid #3b4cca;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .about h2 {
+            color: #3b4cca;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .pokemon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .pokemon-card {
+            background-color: #f2f2f2;
+            border: 3px solid #3b4cca;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .pokemon-card:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 20px #ff0000;
+        }
+
+        .pokemon-card img {
+            width: 150px;
+            margin-top: 15px;
+        }
+
+        .pokemon-card h3 {
+            color: #3b4cca;
+            margin: 10px 0;
+        }
+
+        .pokemon-card p {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .btn-detail {
+            display: inline-block;
+            background-color: #ff0000;
+            color: #fff;
+            font-size: 0.7rem;
+            padding: 5px 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .btn-detail:hover {
+            background-color: #cc0000;
+        }
+
+        footer {
+            background-color: #3b4cca;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            border-top: 5px solid #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pokédex Simples</h1>
+        <p>Explore alguns Pokémon!</p>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <p>Bem-vindo à Pokédex! Aqui você pode conhecer alguns dos Pokémon mais famosos do mundo.</p>
+        </div>
+
+        <div class="about">
+            <h2>Sobre Pokémon</h2>
+            <p>Pokémon são criaturas fantásticas que os treinadores capturam, treinam e fazem batalhar. Cada Pokémon possui tipos e habilidades únicas. A Pokédex é um dispositivo eletrônico usado para registrar informações sobre os Pokémon encontrados pelo mundo.</p>
+        </div>
+
+        <div class="pokemon-grid">
+            <div class="pokemon-card">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+                <h3>Pikachu</h3>
+                <p>Tipo: Elétrico</p>
+                <a href="#" class="btn-detail">Ver Detalhes</a>
+            </div>
+
+            <div class="pokemon-card">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Bulbasaur">
+                <h3>Bulbasaur</h3>
+                <p>Tipo: Grama/Veneno</p>
+                <a href="#" class="btn-detail">Ver Detalhes</a>
+            </div>
+
+            <div class="pokemon-card">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="Charmander">
+                <h3>Charmander</h3>
+                <p>Tipo: Fogo</p>
+                <a href="#" class="btn-detail">Ver Detalhes</a>
+            </div>
+
+            <div class="pokemon-card">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="Squirtle">
+                <h3>Squirtle</h3>
+                <p>Tipo: Água</p>
+                <a href="#" class="btn-detail">Ver Detalhes</a>
+            </div>
+
+            <div class="pokemon-card">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png" alt="Jigglypuff">
+                <h3>Jigglypuff</h3>
+                <p>Tipo: Normal/Fada</p>
+                <a href="#" class="btn-detail">Ver Detalhes</a>
+            </div>
+
+            <div class="pokemon-card">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png" alt="Gengar">
+                <h3>Gengar</h3>
+                <p>Tipo: Fantasma/Veneno</p>
+                <a href="#" class="btn-detail">Ver Detalhes</a>
+            </div>
+
+            <div class="pokemon-card">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png" alt="Snorlax">
+                <h3>Snorlax</h3>
+                <p>Tipo: Normal</p>
+                <a href="#" class="btn-detail">Ver Detalhes</a>
+            </div>
+
+            <div class="pokemon-card">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png" alt="Mewtwo">
+                <h3>Mewtwo</h3>
+                <p>Tipo: Psíquico</p>
+                <a href="#" class="btn-detail">Ver Detalhes</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Pokédex &copy; 2025</p>
+    </footer>
+</body>
+</html>
